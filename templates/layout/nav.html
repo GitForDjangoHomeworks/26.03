@@ -1,0 +1,49 @@
+{% load static %}
+
+<div class="site-branding-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="logo">
+                    <h1><a href="./"><img src="{% static 'img/logo.png' %}"></a></h1>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="shopping-item">
+                    <a href="{% url 'cart:cart_detail' %}">Cart - <span class="cart-amunt">$0</span> <i class="fa fa-shopping-cart"></i>
+                        <span class="product-count">5</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mainmenu-area">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'mainpage:show_mainpage' %}">Home</a></li>
+                    <li><a href="shop.html">Shop page</a></li>
+                    {% comment %}
+                    <li><a href="{% url 'products:show_single_product_page' 1 %}">Single product</a></li>
+                    {% endcomment %}
+                    <li><a href="{% url 'cart:cart_detail' %}">Cart</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    
+                    <li><a href="#">Others</a></li>
+                    <li><a href="{% url 'contacts:contact_page_form_view' %}">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
